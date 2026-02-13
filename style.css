@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fecfef);
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+.container { max-width: 600px; margin: 0 auto; padding: 20px; background: rgba(255,255,255,0.9); border-radius: 10px; }
+textarea { width: 100%; height: 100px; margin: 10px 0; padding: 10px; border-radius: 5px; }
+.themes { display: flex; justify-content: space-around; margin: 20px 0; }
+button { background: #ff6b6b; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+button:hover { background: #ff5252; }
+
+/* Card Styles */
+.card { max-width: 600px; margin: 50px auto; padding: 20px; background: rgba(255,255,255,0.9); border-radius: 10px; }
+
+/* Theme Animations (No Images Needed) */
+.hearts {
+    background: linear-gradient(135deg, #ffe6e6, #ffcccc); /* Soft pink gradient */
+    position: relative;
+    overflow: hidden; /* Prevents elements from overflowing */
+}
+.hearts::before {
+    content: '❤️';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 2em;
+    animation: float 3s infinite;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.stardust {
+    background: radial-gradient(circle, #fff 1px, transparent 1px); /* Dotted pattern for stars */
+    background-size: 20px 20px;
+    animation: twinkle 2s infinite;
+    position: relative;
+}
+@keyframes twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.petals {
+    background: linear-gradient(135deg, #f8e1e1, #e6b3b3); /* Rose-like gradient */
+    position: relative;
+    overflow: hidden;
+}
+.petals::after {
+    content: '🌹';
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 2em;
+    animation: fall 4s infinite;
+}
+@keyframes fall {
+    0% { transform: translateY(-100vh); }
+    100% { transform: translateY(100vh); }
+}
+
+.sparkles {
+    background: linear-gradient(45deg, #ffd700, #ff69b4); /* Gold to pink gradient */
+    position: relative;
+    overflow: hidden;
+}
+.sparkles::before {
+    content: '✨';
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    font-size: 2em;
+    animation: sparkle 1.5s infinite;
+}
+@keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1); }
+}

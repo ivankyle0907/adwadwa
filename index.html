@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!-- Creator Section -->
+<div id="creator" class="container">
+    <h1>Create a Romantic Valentine Card</h1>
+    <form id="cardForm">
+        <label for="message">Your Romantic Message:</label>
+        <textarea id="message" placeholder="Type your heartfelt message here..." required></textarea>
+        
+        <label>Choose a Theme:</label>
+        <div class="themes">
+            <input type="radio" id="hearts" name="theme" value="hearts" checked>
+            <label for="hearts">Floating Hearts</label>
+            
+            <input type="radio" id="stardust" name="theme" value="stardust">
+            <label for="stardust">Stardust</label>
+            
+            <input type="radio" id="petals" name="theme" value="petals">
+            <label for="petals">Rose Petals</label>
+            
+            <input type="radio" id="sparkles" name="theme" value="sparkles">
+            <label for="sparkles">Sparkling Lights</label>
+        </div>
+        
+        <button type="button" id="generateBtn">Generate Shareable Link</button>
+    </form>
+    <div id="linkOutput" style="display: none;">
+        <p>Share this link with your partner:</p>
+        <input type="text" id="shareLink" readonly>
+        <button onclick="copyLink()">Copy Link</button>
+    </div>
+</div>
+
+<!-- Card Viewer Section (Hidden by Default) -->
+<div id="viewer" class="card" style="display: none;">
+    <h1>Happy Valentine's Day!</h1>
+    <p id="romanticMessage"></p>
+    <p>With all my love ❤️</p>
+    <button onclick="backToCreator()">Back to Creator</button>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
